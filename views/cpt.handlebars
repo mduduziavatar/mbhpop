@@ -1,0 +1,66 @@
+<div class="row">
+    <canvas id="barGraph" height="20" width="100"></canvas>
+    <script>const CHART = document.getElementById("barGraph");
+        console.log(CHART);
+        let barGraph = new Chart(CHART, {
+            type: 'bar',
+            data: {
+                labels: ['Cape Town', 'Johannesburg', 'Durban'],
+                datasets: [{
+                    label: '#Most Popular By Votes',
+                    data: [12, 0, 1],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+    <form action="/cpt" method="GET">
+        <div class="row">
+
+    
+        <div class="col-6">
+            
+                <a href="/rentals/cpt"><h2>Rentals</h2>
+                   <img src="./images/joburg.jpg" class="rounded float-start" alt="johannesburg"> 
+                </a>
+                
+                
+                Rent homes and cars in the city of gold from popstars near you!
+               
+        </div>
+        <div class="col-6">
+            <a href="/entertainment/cpt">
+                <h2>Entertainment</h2></a>
+                <div><img src="./images/dbn.jpg" alt="durban"></div>
+                Explore the city of gold and meet fellow poppers,  with selections from the best markets and clubs!            </span>
+            <br>
+        </div>
+    
+</div>
+    </form>
+</div>

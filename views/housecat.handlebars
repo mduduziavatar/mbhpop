@@ -1,0 +1,24 @@
+<div class="row">
+    <form action="/housecat" method="get"></form>
+    <h1>Please Enter Your Details Below:</h1>
+    <div class="chat">
+        <span>
+            Name:<input type="text" id="name" placeholder="enter your name">
+            Surname:<input type="text" placeholder="enter your surname">
+            Email: <input type="email" id="myEmail" placeholder="john@example.com">
+            Picture:<input type="file" id="myFile">
+            <button onclick="myFunction()">Submit</button>
+        </span>
+    </div>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myEmail").value;
+            var y = "Your Ad Will Be Posted Within The Next 30mins!! " + document.getElementById("name").value;
+            document.getElementById("demo1").innerHTML = x;
+            document.getElementById("demo").innerHTML = y;
+        }
+    </script>
+</div>
