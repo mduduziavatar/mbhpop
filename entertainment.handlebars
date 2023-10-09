@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{town}} Entertainment - POP-UP!</title>
+    <!-- Include your CSS stylesheets and other head content here -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 style="text-align: center;">{{town}} Entertainment</h1>
+        </div>
+        <div class="row">
+            <canvas id="barGraph" height="20" width="100"></canvas>
+            <script>
+                // Your JavaScript code for the bar graph goes here
+            </script>
+        </div>
+        <div class="row">
+            <!-- Top navigation -->
+            <form action="{{town}}/entertainment" method="GET">
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="{{town}}/entertainment/restaurants">
+                    <h2>{{town}} Restaurants</h2>
+                </a>
+                <img src="/images/restaurant.jpg" class="img-fluid rounded" alt="Restaurant">
+                <p>Explore the diverse culinary scene in {{town}} with a wide range of restaurants and cuisines.</p>
+            </div>
+            <div class="col-md-6">
+                <a href="{{town}}/entertainment/pop-up-events">
+                    <h2>{{town}} Pop-Up Events</h2>
+                </a>
+                <img src="/images/pop-up-event.jpg" class="img-fluid rounded" alt="Pop-Up Event">
+                <p>Discover exciting pop-up events and happenings in {{town}} for a memorable experience.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

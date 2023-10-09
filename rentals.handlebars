@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{town}} Rentals - POP-UP!</title>
+    <!-- Include your CSS stylesheets and other head content here -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 style="text-align: center;">{{town}} Rentals</h1>
+        </div>
+        <div class="row">
+            <canvas id="barGraph" height="20" width="100"></canvas>
+            <script>
+                const CHART = document.getElementById("barGraph");
+                console.log(CHART);
+                let barGraph = new Chart(CHART, {
+                    type: 'bar',
+                    data: {
+                        labels: ['House Rentals', 'Car Rentals'],
+                        datasets: [{
+                            label: '#Most Popular By Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            </script>
+        </div>
+        <div class="row">
+            
+            <form action="{{town}}/rentals" method="GET">
+                
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="{{town}}/rentals/houses">
+                    <h2>{{town}} House Rentals</h2>
+                </a>
+                <img src="/images/cape-town.jpg" class="img-fluid rounded" alt="Cape Town">
+                <p>Cape Town is a port city on South Africa’s southwest coast, known for its stunning landscapes and rich history.</p>
+            </div>
+            <div class="col-md-6">
+                <a href="{{town}}/rentals/cars">
+                    <h2>{{town}} Car Rentals</h2>
+                </a>
+                <img src="/images/joburg.jpg" class="img-fluid rounded" alt="Johannesburg">
+                <p>Johannesburg, also known as Jozi, is the largest city in South Africa and a major economic hub.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
